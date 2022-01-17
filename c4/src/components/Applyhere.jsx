@@ -16,6 +16,14 @@ export const Apply = () => {
         getJobs();
     } , [])
 
+    const handleApply = (id) => {
+
+        
+        axios.patch(`http://localhost:3001/jobs/${id}`,({status:'applied'}))
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err))
+    }
+
     return (
         <div>
 
@@ -28,7 +36,7 @@ export const Apply = () => {
 <i style={{margin:"10px"}}>type: {e.jobtype}</i>
 <i style={{margin:"10px"}}>location : {e.location}</i>
 <i style={{margin:"10px"}}>salary: {e.id * 10000}</i>
-<button style={{margin:"10px"}}>Apply</button>
+<button onClick={handleApply(e.id)} style={{margin:"10px"}}>Apply</button>
 
      </div>
     

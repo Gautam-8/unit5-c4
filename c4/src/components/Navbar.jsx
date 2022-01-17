@@ -5,7 +5,7 @@ export const Navbar = () => {
     return (
         <div>
             <Link to={'/'} style={{margin:"10px"}}> Login  </Link>
-            <Link to={'/dashboard'} style={{margin:"10px"}}>Dashboard</Link>
+            <Link to={'/dashboard'} style={{margin:"10px"}}>Admin</Link>
             <Link to={'/apply'} style={{margin:"10px"}}>Apply</Link>
 
         </div>

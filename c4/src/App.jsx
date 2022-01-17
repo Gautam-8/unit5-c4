@@ -5,6 +5,8 @@ import { Login } from './components/Login';
 import { Navbar } from './components/Navbar';
 import { Dashboard } from './components/Dashboard';
 import { Apply } from './components/Applyhere';
+import { PrivateRoute } from './components/PrivateRoutes';
+
 
 function App() {
   return (
@@ -15,8 +17,9 @@ function App() {
 <Routes>
   <Route path='/' element={<Login />}></Route>
 
-  <Route path='/dashboard' element={<Dashboard/>}></Route>
-  <Route path='/apply' element={<Apply/>}></Route>
+  <Route path='/dashboard' element={<PrivateRoute><Dashboard/></PrivateRoute>}></Route>
+  
+  <Route path='/apply' element={<PrivateRoute> <Apply/></PrivateRoute>}></Route>
 </Routes>
 
 
