@@ -4,6 +4,7 @@ import { Route,Routes } from 'react-router-dom';
 import { Login } from './components/Login';
 import { Navbar } from './components/Navbar';
 import { Dashboard } from './components/Dashboard';
+import { Apply } from './components/Applyhere';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
   <Route path='/' element={<Login />}></Route>
 
   <Route path='/dashboard' element={<Dashboard/>}></Route>
+  <Route path='/apply' element={<Apply/>}></Route>
 </Routes>
 
 

@@ -1,0 +1,16 @@
+{
+  "jobs": [
+    {
+      "job": "abc",
+      "location": "mysore",
+      "jobtype": "workfromhome",
+      "id": 1
+    },
+    {
+      "job": "abcde",
+      "location": "bangalore",
+      "jobtype": "workfromoffice",
+      "id": 2
+    }
+  ]
+}

@@ -1,13 +1,11 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { addJob } from "../features/jobs/action";
+import {  addJobtodb } from "../features/jobs/action";
 
 export const Dashboard = () => {
 
     const [form , setForm] = useState({});
     const dispatch = useDispatch();
-
-    const {jobs} = useSelector((state) => state.jobState.jobs)
 
     const handleChange = (e) => {
         
@@ -25,7 +23,7 @@ export const Dashboard = () => {
         e.preventDefault();
         console.log(form);
 
-        dispatch(addJob(form))
+        dispatch(addJobtodb(form))
 
     }
 
@@ -42,8 +40,6 @@ export const Dashboard = () => {
 
             </form>
           
-
-
         </div>
     )
 }

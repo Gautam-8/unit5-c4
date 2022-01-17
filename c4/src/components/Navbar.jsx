@@ -4,8 +4,9 @@ export const Navbar = () => {
 
     return (
         <div>
-            <Link to={'/'}> Login  </Link>
-            <Link to={'/dashboard'} >Dashboard</Link>
+            <Link to={'/'} style={{margin:"10px"}}> Login  </Link>
+            <Link to={'/dashboard'} style={{margin:"10px"}}>Dashboard</Link>
+            <Link to={'/apply'} style={{margin:"10px"}}>Apply</Link>
 
         </div>
 
