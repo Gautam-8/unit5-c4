@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 import { loginSuccess } from "../features/jobs/action";
 
 export const Login = () => {
@@ -25,7 +26,8 @@ export const Login = () => {
       e.preventDefault();
       console.log(login);
 
-      dispatch(loginSuccess(login))
+      dispatch(loginSuccess(login));
+  
 
 
   }

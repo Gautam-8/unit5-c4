@@ -24,9 +24,18 @@ export const Apply = () => {
         .catch((err) => console.log(err))
     }
 
+    const Sort = () => {
+        axios.get("http://localhost:3001/jobs?_sort=id&_order=desc")
+        .then((res) => (console.log(res.data) , 
+        setList(res.data)))
+        .catch((err) => console.log(err))
+    }
+
+
+    
     return (
         <div>
-
+<button onClick={Sort}>sort</button>
      {list ?
      
      list.map((e) => 
@@ -44,6 +53,8 @@ export const Apply = () => {
      ): null
     
     }
+
+    
 
         </div>
     )

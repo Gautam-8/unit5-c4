@@ -27,6 +27,13 @@
       "location": "blore",
       "jobtype": "office",
       "id": 4
+    },
+    {
+      "status": "applied",
+      "job": "mern",
+      "location": "bellary",
+      "jobtype": "home",
+      "id": 5
     }
   ]
 }
