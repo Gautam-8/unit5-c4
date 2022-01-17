@@ -1,9 +1,12 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { useDispatch } from "react-redux";
+import { applyJob } from "../features/jobs/action";
 
 export const Apply = () => {
 
     const [list , setList] = useState(null);
+    const dispatch = useDispatch();
 
     const getJobs = () => {
         axios.get("http://localhost:3001/jobs")
@@ -17,10 +20,9 @@ export const Apply = () => {
     } , [])
 
     const handleApply = (id) => {
-
-        
+      
         axios.patch(`http://localhost:3001/jobs/${id}`,({status:'applied'}))
-        .then((res) => console.log(res))
+        .then((res) => (console.log(res) , dispatch(applyJob(res.data))))
         .catch((err) => console.log(err))
     }
 
@@ -45,7 +47,7 @@ export const Apply = () => {
 <i style={{margin:"10px"}}>type: {e.jobtype}</i>
 <i style={{margin:"10px"}}>location : {e.location}</i>
 <i style={{margin:"10px"}}>salary: {e.id * 10000}</i>
-<button onClick={handleApply(e.id)} style={{margin:"10px"}}>Apply</button>
+<button onClick={() => handleApply(e.id)} style={{margin:"10px"}}>Apply</button>
 
      </div>
     
