@@ -1,13 +1,16 @@
+
+import axios from "axios";
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
-import { loginSuccess } from "../features/jobs/action";
+import { Navigate, useNavigate } from "react-router-dom";
+import { loginError, loginSuccess } from "../features/jobs/action";
 
 
 export const Login = () => {
 
 
  const [login , setLogin] = useState({});
+ const navigate = useNavigate();
 
 
   const handleChange = (e) => {
@@ -26,10 +29,13 @@ export const Login = () => {
   const handleSubmit = (e) => {
       e.preventDefault();
       console.log(login);
+    
 
-      dispatch(loginSuccess(login));
+      axios.post("https://reqres.in/api/login" , login)
+      .then((res) => (console.log(res.data.token) ,   dispatch(loginSuccess(login)) ,navigate('/dashboard') ))
+      .catch((err) => (console.log(err) ,dispatch(loginError(err))))
   
-       
+      
 
   }
 
