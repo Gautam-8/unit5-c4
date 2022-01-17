@@ -32,7 +32,7 @@ export const Login = () => {
     
 
       axios.post("https://reqres.in/api/login" , login)
-      .then((res) => (console.log(res.data.token) ,   dispatch(loginSuccess(login)) ,navigate('/dashboard') ))
+      .then((res) => (console.log(res.data.token) ,   dispatch(loginSuccess(login))  ))
       .catch((err) => (console.log(err) ,dispatch(loginError(err))))
   
       
