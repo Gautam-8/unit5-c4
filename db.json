@@ -34,6 +34,20 @@
       "location": "bellary",
       "jobtype": "home",
       "id": 5
+    },
+    {
+      "status": "applied",
+      "job": "mern",
+      "location": "mern",
+      "jobtype": "mern",
+      "id": 6
+    },
+    {
+      "status": "not applied",
+      "job": "mern",
+      "location": "mern",
+      "jobtype": "mern",
+      "id": 7
     }
   ]
 }
