@@ -48,6 +48,20 @@
       "location": "mern",
       "jobtype": "mern",
       "id": 7
+    },
+    {
+      "status": "applied",
+      "job": "qwqerty",
+      "location": "qweqrty",
+      "jobtype": "qwerty",
+      "id": 8
+    },
+    {
+      "status": "applied",
+      "job": "asd",
+      "location": "asd",
+      "jobtype": "asd",
+      "id": 9
     }
   ]
 }
