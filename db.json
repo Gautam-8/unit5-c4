@@ -62,6 +62,13 @@
       "location": "asd",
       "jobtype": "asd",
       "id": 9
+    },
+    {
+      "status": "applied",
+      "job": "zxcv",
+      "location": "zxcv",
+      "jobtype": "zxcv",
+      "id": 10
     }
   ]
 }
